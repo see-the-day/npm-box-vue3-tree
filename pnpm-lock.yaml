@@ -31,12 +31,12 @@ specifiers:
   vue: ^3.2.22
   vue-router: ^4.0.11
   vue-tsc: ^1.0.8
-  vue3-org: ^0.0.20
+  vue3-org: ^0.0.27
 
 dependencies:
   vue: 3.2.41
   vue-router: 4.1.5_vue@3.2.41
-  vue3-org: 0.0.20
+  vue3-org: 0.0.27
 
 devDependencies:
   '@tailwindcss/postcss7-compat': 2.2.17
@@ -55,7 +55,7 @@ devDependencies:
   eslint-plugin-promise: 4.3.1
   eslint-plugin-standard: 5.0.0_eslint@6.8.0
   eslint-plugin-vue: 7.20.0_eslint@6.8.0
-  naive-ui: 2.30.8_vue@3.2.41
+  naive-ui: 2.33.5_vue@3.2.41
   node-sass: 7.0.3
   postcss: 8.4.18
   sass: 1.55.0
@@ -521,6 +521,10 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: true
 
+  /@types/node/18.11.2:
+    resolution: {integrity: sha512-BWN3M23gLO2jVG8g/XHIRFWiiV4/GckeFIqbU/C4V3xpoBBWSMk4OZomouN0wCkfQFPqgZikyLr7DOYDysIkkw==}
+    dev: true
+
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha1-0zV0eaD9/dWQf+Z+F+CoXJBuEwE=}
     dev: true
@@ -773,8 +777,8 @@ packages:
       '@vue/compiler-dom': 3.2.41
       '@vue/shared': 3.2.41
 
-  /@vue/devtools-api/6.4.4:
-    resolution: {integrity: sha512-Ku31WzpOV/8cruFaXaEZKF81WkNnvCSlBY4eOGtz5WMSdJvX1v1WWlSMGZeqUwPtQ27ZZz7B62erEMq8JDjcXw==}
+  /@vue/devtools-api/6.4.5:
+    resolution: {integrity: sha512-JD5fcdIuFxU4fQyXUu3w2KpAJHzTVdN+p4iOX2lMWSHMOoQdMAcpFLZzm9Z/2nmsoZ1a96QEhZ26e50xLBsgOQ==}
     dev: false
 
   /@vue/eslint-config-standard/5.1.2_a3cd96c32f92ba779f20e23dc59f810d:
@@ -1643,7 +1647,6 @@ packages:
 
   /commander/2.20.3:
     resolution: {integrity: sha1-/UhehMA+tIgcIHIrpIA16FMa6zM=}
-    requiresBuild: true
     dev: true
 
   /commander/8.3.0:
@@ -2898,7 +2901,7 @@ packages:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.1.2
+      minimatch: 3.0.8
       once: 1.4.0
       path-is-absolute: 1.0.1
     dev: true
@@ -3430,7 +3433,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.11.2
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
@@ -3439,7 +3442,7 @@ packages:
     resolution: {integrity: sha512-CqRA220YV/6jCo8VWvAt1KKx6eek1VIHMPeLEbpcfSfkEeWyBNppynM/o6q+Wmw+sOhos2ml34wZbSX3G13//g==}
     engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.11.2
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
@@ -3891,8 +3894,8 @@ packages:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
     dev: true
 
-  /naive-ui/2.30.8_vue@3.2.41:
-    resolution: {integrity: sha512-KRGq9ZwKt/7XyrmSEhqqTNTEDS/gyogCySWX/RKYDcehEDgkJmYrU2WRCtu/RblT/6u3K4d3Dja2+qP1FnHg8Q==}
+  /naive-ui/2.33.5_vue@3.2.41:
+    resolution: {integrity: sha512-O87zwOduut3Xk9NzGIX+LZYr6sW/Y0oGuNJ6T2dka+14CtHD9iidi8gdxg6obhMpzdwa3SnlxO7nzDLqmXVUwA==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
@@ -5719,7 +5722,7 @@ packages:
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@vue/devtools-api': 6.4.4
+      '@vue/devtools-api': 6.4.5
       vue: 3.2.41
     dev: false
 
@@ -5751,19 +5754,19 @@ packages:
       '@vue/shared': 3.2.41
     dev: false
 
-  /vue3-org/0.0.18:
-    resolution: {integrity: sha512-lazVd35trDUEXTHe8p9yaGWNbIi1Re7yZHZhqaaXAcOiQgFhSLEDBcNIPemTc6lvroDNARDPi4RXSZtlvOI41w==}
+  /vue3-org/0.0.26:
+    resolution: {integrity: sha512-Gv/QiRqcl2ovw7+8qCe9xnN7Leb0/Px9n/CNfiG69DPDvtqbDLvBH9tHf37tRzJfsMB9EkccRXQiuSkgKYSEgA==}
     dependencies:
       vue: 3.2.41
       vue-router: 4.1.5_vue@3.2.41
     dev: false
 
-  /vue3-org/0.0.20:
-    resolution: {integrity: sha512-EL+tbzCVWb2aJ937xvIoTvG8tKvjR4VqTQ4xDAOR9fs5DA46QBffLUxYI98BdgUpHUK174LkBRQ69BUKcVB8/g==}
+  /vue3-org/0.0.27:
+    resolution: {integrity: sha512-OMoWDERV/VF1tF1OlsRUUKJd7/4r2QHxrt6ndA2kP4VirMRi5wu3VUacHpclfVvUJp/onu5cRu6Z2qIFYrfF4Q==}
     dependencies:
       vue: 3.2.41
       vue-router: 4.1.5_vue@3.2.41
-      vue3-org: 0.0.18
+      vue3-org: 0.0.26
     dev: false
 
   /vueuc/0.4.49_vue@3.2.41:
