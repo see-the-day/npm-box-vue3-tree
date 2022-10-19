@@ -1,51 +1,68 @@
 const path = require('path')
-const { defineConfig, build } = require('vite')
+// const fs = require('fs')
+
+// 使用vite打包
+const { build, defineConfig } = require('vite')
+
+// 用到的插件
 const vue = require('@vitejs/plugin-vue')
+const dts = require('vite-plugin-dts')
+const DefineOptions = require('unplugin-vue-define-options/vite')
 
-// 添加打包入口文件夹 packages（需要手动创建）
-const entryDir = path.resolve(__dirname, '../src/components')
-// 添加出口文件夹 lib（不需要手动创建，会自动生成）
-const outDir = path.resolve(__dirname, '../lib')
+// 根目录
+const rootDir = path.resolve(__dirname, '../')
+function resolve (...urlOrUrls) {
+  return path.resolve(rootDir, ...urlOrUrls)
+}
 
-// vite 配置
+// 打包后的目录
+const outDir = resolve('lib')
+
 const baseConfig = defineConfig({
-  configFile: false,
-  publicDir: false,
-  plugins: [vue()]
-})
-
-// rollup 配置（vite 基于 rollup 打包）
-const rollupOptions = {
-  // 这两个库不需要打包
-  external: ['vue', 'vue-router'],
-  output: {
-    globals: {
-      vue: 'Vue'
+  plugins: [
+    vue(),
+    DefineOptions(),
+    dts({
+      include: ['src/components'],
+      outputDir: path.resolve(outDir, 'types')
+    })
+  ],
+  build: {
+    lib: {
+      entry: resolve('src/components/index.ts'),
+      name: 'index',
+      fileName: format => `index.${format}.js`
+    },
+    outDir,
+    rollupOptions: {
+      // 确保外部化处理那些你不想打包进库的依赖
+      external: ['vue'],
+      output: {
+        // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
+        globals: {
+          vue: 'Vue'
+        }
+      }
     }
   }
+})
+
+main()
+
+async function main () {
+  // build
+  await build(baseConfig)
+
+  // await copyFiles()
 }
 
-// 全量构建
-const buildAll = async () => {
-  await build(defineConfig({
-    ...baseConfig,
-    build: {
-      rollupOptions,
-      lib: {
-        entry: path.resolve(entryDir, 'index.ts'),
-		    // 组件库名字
-        name: 'index',
-        fileName: 'index',
-		    // 输出格式
-        formats: ['es', 'umd']
-      },
-      outDir
-    }
-  }))
-}
-
-const buildLib = async () => {
-  await buildAll()
-}
-
-buildLib()
+// async function copyFiles () {
+//   // fs.copyFileSync(
+//   //   resolve('packages/vangle/package.json'),
+//   //   resolve('packages/vangle/dist/package.json')
+//   // )
+//   fs.copyFileSync(
+//     resolve('README.md'),
+//     resolve('packages/vangle/README.md')
+//   )
+// }

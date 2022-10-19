@@ -3,7 +3,7 @@
 </template>
 <script lang="ts" setup>
 import { shallowRef, watch, withDefaults, h, VNode, useSlots } from 'vue'
-import { Data, GlobalStyles } from '@/types/OrgData'
+import { Data, GlobalStyles } from '../types/OrgData'
 interface OrgProps {
   data: Data,
   globalStyles: GlobalStyles,
