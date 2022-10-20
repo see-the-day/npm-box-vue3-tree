@@ -1,3 +1,1 @@
-import { Data, GlobalStyles } from './OrgData'
-
-export { Data, GlobalStyles }
+export * from './OrgData'
