@@ -1,9 +1,27 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
+
 // https://vitejs.dev/config/
+import dts from 'vite-plugin-dts'
+import DefineOptions from 'unplugin-vue-define-options/vite'
+
+const rootDir = path.resolve(__dirname, './')
+function resolve (...urlOrUrls) {
+  return path.resolve(rootDir, ...urlOrUrls)
+}
+// 打包后的目录
+const outDir = resolve('lib')
+
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    DefineOptions(),
+    dts({
+      include: ['./src/components'],
+      outputDir: path.resolve(outDir)
+    })
+  ],
   base: './',
   resolve: {
     alias: {
@@ -13,7 +31,7 @@ export default defineConfig({
   build: {
     outDir: 'lib',
     lib: {
-      entry: path.resolve(__dirname, './src/components/index.ts'), // 指定组件编译入口文件
+      entry: resolve('src/components/index.ts'), // 指定组件编译入口文件
       name: 'index',
       fileName: 'index'
     }, // 库编译模式配置

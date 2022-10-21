@@ -24,7 +24,7 @@ const baseConfig = defineConfig({
     DefineOptions(),
     dts({
       include: ['src/components'],
-      outputDir: path.resolve(outDir, 'types')
+      outputDir: path.resolve(outDir)
     })
   ],
   build: {
@@ -50,19 +50,5 @@ const baseConfig = defineConfig({
 main()
 
 async function main () {
-  // build
   await build(baseConfig)
-
-  // await copyFiles()
 }
-
-// async function copyFiles () {
-//   // fs.copyFileSync(
-//   //   resolve('packages/vangle/package.json'),
-//   //   resolve('packages/vangle/dist/package.json')
-//   // )
-//   fs.copyFileSync(
-//     resolve('README.md'),
-//     resolve('packages/vangle/README.md')
-//   )
-// }

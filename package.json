@@ -1,6 +1,6 @@
 {
   "name": "vue3-org",
-  "version": "0.0.27",
+  "version": "1.0.2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,7 +13,7 @@
   "dependencies": {
     "vue": "^3.2.22",
     "vue-router": "^4.0.11",
-    "vue3-org": "^0.0.27"
+    "vue3-org": "^1.0.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.17",
@@ -49,7 +49,7 @@
   "main": "lib/index.umd.js",
   "module": "lib/index.es.js",
   "author": "",
-  "types": "lib/types/index.d.ts",
+  "types": "lib/index.d.ts",
   "license": "ISC",
   "files": [
     "es",

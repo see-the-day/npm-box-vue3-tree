@@ -30,7 +30,7 @@ const getChildren = (data: Data) => {
     { class: 'tree-toggle', onClick: () => hideChildren(data) },
     slots.expand ? slots.expand(data) : data.unExpand ? '+' : '-'
   )
-  const next = h('div', { class: 'flex flex-col left-border' }, data.unExpand ? [status] : [status, ...children])
+  const next = h('div', { class: 'left-border' }, data.unExpand ? [status] : [status, ...children])
 
   return children.length ? [current, next] : [current]
 }
@@ -85,6 +85,8 @@ watch(() => props.globalStyles, () => {
     margin-left: v-bind('globalStyles.$left');
     padding-left: v-bind('globalStyles.$left');
     position: relative;
+    display: flex;
+    flex-direction: column;
     &:before {
       content: '';
       position: absolute;

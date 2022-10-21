@@ -1,8 +1,8 @@
 import type { App } from 'vue'
-import vueTree from './index/org.vue'
+import vueOrg from './index/org.vue'
 
-const install = function (app:App):void {
-  app.component('VueTree', vueTree)
+const install = function (app: App):void {
+  app.component('VueOrg', vueOrg)
 }
-export { vueTree }
-export default { install }
+export { vueOrg }
+export default install

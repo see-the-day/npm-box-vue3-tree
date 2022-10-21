@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <vueTree :data="data" :globalStyles="globalStyles" align="vertical" @on-expand-toggle="expand">
+    <vueOrg :data="data" :globalStyles="globalStyles" align="top" @on-expand-toggle="expand">
       <template #default="node">
         <div>
           {{ node.label }}
@@ -11,7 +11,7 @@
           11
         </div>
       </template> -->
-    </vueTree>
+    </vueOrg>
     <div class="w-200 ml-20">
       <div v-for="li of list" :key="li.key" class="flex items-center mb-10">
         {{ li.name }} <NInput v-model:value="globalStyles[li.key]" class="flex-1 ml-12" type="text" />
@@ -20,11 +20,12 @@
   </div>
 </template>
 <script lang="ts" setup>
-// import org from '@/components/index/org.vue'
 import data from './mock'
 import { NInput } from 'naive-ui'
 import { reactive } from 'vue'
-import { Data } from '@/types/OrgData'
+import { vueOrg } from 'vue3-org'
+import type { Data } from 'vue3-org/lib/types'
+import 'vue3-org/lib/style.css'
 const expand = (expand: boolean, data: Data) => {
   console.log(expand, data)
 }
