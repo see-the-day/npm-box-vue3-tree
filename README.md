@@ -6,11 +6,7 @@
   "vite-plugin-dts": "^1.4.1",
   "unplugin-vue-define-options": "^0.10.0",
 ```
-  
-## 将build文件复制过去
-```javascript
-    "build-ku": "node ./build/build.js",
-```
+  修改自己的vite.config.ts
 
 # 使用方案
 ## 使用npm安装
