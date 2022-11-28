@@ -2,7 +2,7 @@
   "name": "vue3-org",
   "version": "1.0.2",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host --open",
     "build": "vite build",
     "build-ku": "node ./build/build.js",
     "serve": "vite preview",
@@ -11,13 +11,14 @@
     "lib": "npm run build:components"
   },
   "dependencies": {
+    "three": "^0.146.0",
     "vue": "^3.2.22",
-    "vue-router": "^4.0.11",
-    "vue3-org": "^1.0.2"
+    "vue-router": "^4.0.11"
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "@types/file-saver": "^2.0.4",
+    "@types/three": "^0.146.0",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.0.0",
     "@vicons/ionicons5": "^0.11.0",

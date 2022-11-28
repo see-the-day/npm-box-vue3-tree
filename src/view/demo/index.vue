@@ -6,11 +6,6 @@
           {{ node.label }}
         </div>
       </template>
-      <!-- <template #expand>
-        <div class=" w-50 h-50 border-1 bg-white">
-          11
-        </div>
-      </template> -->
     </vueOrg>
     <div class="w-200 ml-20">
       <div v-for="li of list" :key="li.key" class="flex items-center mb-10">
@@ -23,8 +18,8 @@
 import data from './mock'
 import { NInput } from 'naive-ui'
 import { reactive } from 'vue'
-import { vueOrg } from 'vue3-org'
-import type { Data } from 'vue3-org/lib/types'
+import { vueOrg } from '../../components/index'
+import type { Data } from '../../components/types'
 import 'vue3-org/lib/style.css'
 const expand = (expand: boolean, data: Data) => {
   console.log(expand, data)
