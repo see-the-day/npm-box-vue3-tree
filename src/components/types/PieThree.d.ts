@@ -18,5 +18,7 @@ export type PieData = PieDataObj[]
 export interface EntryOption {
   color: string|number,
   startAngle: number,
-  endAngle: number
+  endAngle: number,
+  radius?: number,
+  opacity?: number
 }
