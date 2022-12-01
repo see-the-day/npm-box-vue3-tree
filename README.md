@@ -19,6 +19,6 @@
 ```
 
 ### 登录
-- [isLoginApp](https://gitlab-team.zdm.net/fe/zdm-utils/tree/master/src/isLoginApp): 判断是否登录
-- [loginApp](https://gitlab-team.zdm.net/fe/zdm-utils/tree/master/src/loginApp): 调起登录
-- [zdmCaptcha](https://gitlab-team.zdm.net/fe/zdm-utils/tree/master/src/zdmCaptcha): 极验
+- [org](): 组织架构图
+- [pdf](): pdf渲染
+- [pie](): 3d饼图
