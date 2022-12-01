@@ -18,14 +18,15 @@ const scene = new THREE.Scene()
 console.log(scene)
 onMounted(() => {
   createMash()
+  createCenterMash()
   createHelper()
   createPoint()
   createRender()
 })
+
 /**
  * 绘制扇形shape
  */
-
 function addFanShape (options: FanShapeOptions) {
   const shape = new THREE.Shape()
   shape.arc(0, 0, options.radius, options.startAngle, options.endAngle, false)
@@ -66,6 +67,19 @@ const createMash = () => {
     scene.add(mesh) // 网格模型添加到场景中
     prevValue = endAngle
   })
+}
+
+const createCenterMash = () => {
+  // const geometry3 = new THREE.CylinderGeometry(40, 40, 100, 15, 1, false)
+  // const material3 = new THREE.MeshLambertMaterial({
+  //   color: 0xffff00
+  // })
+  // const mesh3 = new THREE.Mesh(geometry3, material3) // 网格模型对象Mesh
+  // mesh3.translateX(120) // 球体网格模型沿Y轴正方向平移120
+  // mesh3.position.set(0, 0, 0) // 设置mesh3模型对象的xyz坐标为120,0,0
+  // mesh3.renderOrder = 0.5
+
+  // scene.add(mesh3)
 }
 
 // 创建坐标轴

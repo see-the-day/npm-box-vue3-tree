@@ -17,18 +17,8 @@
 ```javascript
     pnpm i vue3-org -s
 ```
-## 引入
-在 main.js 中写入以下内容：
-```javascript
-    import vue3Org from 'vue3-org';
-    import 'vue3-org/lib/style.css';
-```
-## 按需引入
-```javascript
-    import { vueOrg } from 'vue3-org'
-    import 'vue3-org/lib/style.css';
-```
-## 按需引入类型
-```javascript
-    import type { Data } from 'vue3-org/lib/types'
-```
+
+### 登录
+- [isLoginApp](https://gitlab-team.zdm.net/fe/zdm-utils/tree/master/src/isLoginApp): 判断是否登录
+- [loginApp](https://gitlab-team.zdm.net/fe/zdm-utils/tree/master/src/loginApp): 调起登录
+- [zdmCaptcha](https://gitlab-team.zdm.net/fe/zdm-utils/tree/master/src/zdmCaptcha): 极验
