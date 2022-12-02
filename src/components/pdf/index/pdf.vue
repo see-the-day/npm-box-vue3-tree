@@ -107,3 +107,19 @@ const renderPdf = () => {
 }
 
 </script>
+<style lang="scss">
+#viewerContainer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+
+  .page,
+  .canvasWrapper,
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100px;
+  }
+}
+</style>

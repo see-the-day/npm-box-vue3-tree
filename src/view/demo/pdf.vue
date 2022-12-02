@@ -1,5 +1,5 @@
 <template>
-  <div class=" w-120 h-full">
+  <div class=" w-960 h-560">
     <pdf :url="pdfUrl" :type="'canvas'" @pageTotal="() => {}" />
   </div>
 </template>
